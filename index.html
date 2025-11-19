@@ -5,19 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Facundo Sune - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Partículas -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-  <!-- Animación scroll -->
   <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
 </head>
 <body>
 
-  <!-- Fondo con partículas -->
   <div id="particles-js"></div>
 
-  <!-- Navegación -->
   <header>
     <nav>
       <ul>
@@ -30,21 +24,19 @@
     </nav>
   </header>
 
-  <!-- INICIO -->
   <section id="inicio">
     <h1 class="reveal">Facundo Sune</h1>
     <p class="reveal">Responsible & Punctual Winter Worker | Harbour Deckhand | STCW Certified</p>
     <a href="#contacto" class="btn reveal">Contact Me</a>
 
-    <!-- 3D Objeto 1 -->
+    <!-- Yate -->
     <div class="sketchfab-embed-wrapper reveal">
-      <iframe title="Lamborghini Aventador SVJ" frameborder="0" allowfullscreen
-        src="https://sketchfab.com/models/412e5ba4c1264a4fab97660ebc0695a4/embed?autostart=1&transparent=1&autospin=0.2&camera=0">
+      <iframe title="Yatch I Second Edition" frameborder="0" allowfullscreen
+        src="https://sketchfab.com/models/b826e1c52d604c599b893967bed8a254/embed?autostart=1&transparent=1&camera=0">
       </iframe>
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="sobre-mi" class="reveal">
     <h2>About Me</h2>
     <p>I’m an 18-year-old Argentinian-Italian student and athlete, currently seeking a temporary winter job in Iceland...</p>
@@ -56,7 +48,6 @@
     </ul>
   </section>
 
-  <!-- EXPERIENCE -->
   <section id="experiencia" class="reveal">
     <h2>Experience</h2>
     <div class="job">
@@ -70,7 +61,6 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section id="habilidades" class="reveal">
     <h2>Skills</h2>
     <ul>
@@ -82,17 +72,16 @@
     </ul>
   </section>
 
-  <!-- 3D Objeto 2 -->
+  <!-- Bandera Argentina animada -->
   <section class="reveal">
-    <h2>Interactive 3D Speedboat</h2>
+    <h2>Nationality</h2>
     <div class="sketchfab-embed-wrapper">
-      <iframe title="Speedboat" frameborder="0" allowfullscreen
-        src="https://sketchfab.com/models/bf0c5a5a5a5a5a5a5a5a5a5a5a5a5a5a/embed?autostart=1&transparent=1&camera=0">
+      <iframe title="Flag of Argentina Animated" frameborder="0" allowfullscreen
+        src="https://sketchfab.com/models/3701490a1a5a42a49349761d88dc0ad5/embed?autostart=1&transparent=1&camera=0">
       </iframe>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contacto" class="reveal">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:facusune1211@gmail.com">facusune1211@gmail.com</a></p>
@@ -100,56 +89,26 @@
     <p>Location: Menorca, Spain (Available for Iceland winter job)</p>
   </section>
 
-  <!-- Scripts -->
   <script>
-    /* MÁS PARTÍCULAS y reacción al ratón */
     particlesJS('particles-js', {
       particles: {
         number: { value: 150 },
         shape: { type: 'circle' },
         size: { value: 3 },
-        move: {
-          enable: true,
-          speed: 3,
-          direction: 'none',
-          random: true,
-          straight: false,
-          out_mode: 'out',
-          bounce: false,
-          attract: { enable: true, rotateX: 600, rotateY: 1200 }
-        },
-        line_linked: {
-          enable: true,
-          distance: 120,
-          color: '#a3d5ff',
-          opacity: 0.5,
-          width: 1
-        },
-        interactivity: {
-          detect_on: 'canvas',
-          events: {
-            onhover: { enable: true, mode: 'repulse' },
-            onclick: { enable: true, mode: 'push' },
-            resize: true
-          }
+        move: { enable: true, speed: 3 },
+        line_linked: { enable: true, distance: 120, color: '#00b4d8', opacity: 0.5, width: 1 }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: { enable: true, mode: 'repulse' },
+          onclick: { enable: true, mode: 'push' }
         }
       }
     });
 
-    /* Revelado suave */
-    ScrollReveal().reveal('.reveal', {
-      delay: 200,
-      distance: '50px',
-      duration: 1000,
-      origin: 'bottom',
-      reset: true
-    });
-  </script>
-
-</body>
-</html>
-    /* ScrollReveal */
     ScrollReveal().reveal('.reveal', { delay: 200, distance: '50px', duration: 1000, origin: 'bottom', reset: true });
   </script>
+
 </body>
 </html>
