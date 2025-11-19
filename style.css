@@ -1,101 +1,109 @@
-/* General */
+/* ---------- RESET ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ---------- BASE ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* compensa menú fijo */
+}
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: #fff;
-  background: #0b1d3f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000814;
+  color: #ffffff;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* Fondo con partículas */
+/* ---------- PARTÍCULAS ---------- */
 #particles-js {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* detrás del contenido, delante del fondo */
 }
 
-/* Navegación */
+/* ---------- NAVEGACIÓN ---------- */
 header {
   position: fixed;
-  top: 0; width: 100%;
-  background: rgba(5, 18, 43, 0.85);
-  backdrop-filter: blur(5px);
+  top: 0; left: 0; right: 0;
+  background: rgba(0, 8, 20, 0.75);
+  backdrop-filter: blur(8px);
   z-index: 1000;
+  padding: 12px 0;
 }
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
+  gap: 30px;
 }
 nav a {
-  color: #a3d5ff;
+  color: #00b4d8;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+  transition: color .3s;
 }
-nav a:hover {
-  color: #fff;
-}
+nav a:hover { color: #90e0ef; }
 
-/* Secciones */
+/* ---------- SECCIONES ---------- */
 section {
+  position: relative;
+  z-index: 2; /* encima de las partículas */
   padding: 100px 20px;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   text-align: center;
 }
 
-/* Foto con hover */
-.foto {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 4px solid #a3d5ff;
-  object-fit: cover;
-  margin-bottom: 20px;
-  transition: transform 0.4s;
-}
-.foto:hover {
-  transform: scale(1.1) rotate(5deg);
-}
+/* ---------- TÍTULOS ---------- */
+h1 { font-size: 3rem; color: #90e0ef; margin-bottom: 15px; }
+h2 { font-size: 2.2rem; color: #00b4d8; margin-bottom: 20px; }
 
-/* Botón */
+/* ---------- BOTÓN ---------- */
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #0077cc;
-  color: white;
-  text-decoration: none;
+  margin-top: 25px;
+  padding: 14px 35px;
+  background: linear-gradient(45deg, #0077b6, #00b4d8);
+  color: #fff;
   border-radius: 30px;
-  transition: background 0.3s;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .3s, box-shadow .3s;
 }
 .btn:hover {
-  background: #005fa3;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 180, 216, .35);
 }
 
-/* 3D */
+/* ---------- 3D IFRAMES ---------- */
 .sketchfab-embed-wrapper iframe {
   width: 100%;
-  height: 300px;
+  height: 320px;
   border: none;
-  margin-top: 30px;
   border-radius: 12px;
+  margin-top: 40px;
+  background: transparent;
 }
 
-/* Jobs */
+/* ---------- JOBS ---------- */
 .job {
-  background: rgba(16, 42, 87, 0.7);
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 20px;
+  background: rgba(0, 119, 182, 0.15);
+  border-left: 4px solid #00b4d8;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 25px;
   text-align: left;
 }
 
-/* Animación suave */
-html {
-  scroll-behavior: smooth;
-}
+/* ---------- LISTAS ---------- */
+ul { list-style: none; padding-left: 0; }
+li { margin: 8px 0; }
+
+/* ---------- ENLACES ---------- */
+a { color: #90e0ef; transition: color .2s; }
+a:hover { color: #caf0f8; }
+
+/* ---------- ANIMACIÓN SUAVE (scroll) ---------- */
+.reveal { opacity: 0; }
