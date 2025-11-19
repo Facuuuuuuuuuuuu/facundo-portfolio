@@ -37,8 +37,8 @@
 
     <!-- Objeto 3D interactivo -->
     <div class="sketchfab-embed-wrapper reveal">
-      <iframe title="Boat 3D" frameborder="0" allowfullscreen
-        src="https://sketchfab.com/models/d290b2c3b92b4b0d8b7a7c7c7c7c7c7c/embed?autostart=1&transparent=1&rotation=1">
+      <iframe title="Aventador SVJ" frameborder="0" allowfullscreen
+        src="https://sketchfab.com/models/412e5ba4c1264a4fab97660ebc0695a4/embed?autostart=1&transparent=1&autospin=0.2&camera=0">
       </iframe>
     </div>
   </section>
@@ -88,19 +88,26 @@
 
   <!-- Scripts -->
   <script>
-    // Inicia partículas
-    particlesJS.load('particles-js', 'particles.json', function(){
-      console.log('particles loaded');
+    /* Partículas directas */
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 60 },
+        shape: { type: 'circle' },
+        size: { value: 3 },
+        move: { enable: true, speed: 2 },
+        line_linked: { enable: true, distance: 120, color: '#a3d5ff', opacity: 0.4, width: 1 }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: { enable: true, mode: 'repulse' },
+          onclick: { enable: true, mode: 'push' }
+        }
+      }
     });
 
-    // Animación al aparecer
-    ScrollReveal().reveal('.reveal', {
-      delay: 200,
-      distance: '50px',
-      duration: 1000,
-      origin: 'bottom',
-      reset: true
-    });
+    /* ScrollReveal */
+    ScrollReveal().reveal('.reveal', { delay: 200, distance: '50px', duration: 1000, origin: 'bottom', reset: true });
   </script>
 </body>
 </html>
