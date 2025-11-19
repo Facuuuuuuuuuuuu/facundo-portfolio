@@ -107,3 +107,13 @@ a:hover { color: #caf0f8; }
 
 /* ---------- ANIMACIÓN SUAVE (scroll) ---------- */
 .reveal { opacity: 0; }
+
+/* ---------- FIX VISIBILIDAD ---------- */
+section {
+  min-height: 100vh;          /* cada sección ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reveal { opacity: 0; }
